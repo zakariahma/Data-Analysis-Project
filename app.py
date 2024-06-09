@@ -5,27 +5,90 @@ import numpy as np
 #import sqlite3
 import ast
 
+st.set_page_config(
+    page_title = "Movie Recommender",
+    page_icon= ":movie_camera:",
+    initial_sidebar_state= "expanded",
+    layout="wide")
+
 # Define your CSS
-css_style = """
+st.markdown("""
 <style>
-.custom-font {
-    font-family: 'Garamond', serif;
-    font-size: 20px;
+/* SideBar */
+.st-emotion-cache-6qob1r {
+background-color: #B6BBC4;           
+            }
+
+.st-emotion-cache-12fmjuu {
+background-color: #161A30;
+            }
+/* main content */
+.st-emotion-cache-bm2z3a {
+background-color: #161A30;
+color: white;
+font-family: "Figtree", sans-serif;
 }
+/* Buttons */            
+.st-emotion-cache-13ejsyy {
+background-color: #161A30;
+color: white
+}
+.st-emotion-cache-13ejsyy:hover {
+color: #A91D3A;
+border-color: #A91D3A;
+}
+.st-emotion-cache-13ejsyy:active {
+color: #A91D3A;
+border-color: #A91D3A;
+}
+/* Buttons container */
+.row-widget.stButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;       
+}
+/* Favorite Movie */           
+.st-emotion-cache-1jmvea6 p {
+    font-size: 1.5rem;
+    font-family: "Figtree", sans-serif;
+    font-weight: 600;
+}
+
+.st-emotion-cache-vdokb0 p {
+    font-size: 1.2rem;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;                                 
+}
+            
+.st-emotion-cache-j6qv4b p {
+    padding: 0.25rem;
+    font-size: 1.2rem;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;    
+}
+
 
 .title{
     padding-bottom: 0;
     margin-bottom: 0;
+    color: white;
+    font-family: "Figtree", sans-serif;
+    font-weight: 700;
 }
 
 :has(.title) {
-gap: 0.5rem;
+    gap: 0.5rem;
+    color: white;
+
+/* Metrics */
+.st-emotion-cache-12w0qpk {
+    background-color: #31363F;
+    color: white;
+}               
 }
 </style>
-"""
+""", unsafe_allow_html=True) 
 
-
-st.set_page_config(layout="wide")
 
 #df_movies = pd.read_csv('data.csv')
 @st.cache_data
@@ -88,8 +151,8 @@ if 'movie' not in st.session_state:
 
 with st.sidebar:
     # Display the text input field
-    movie_name = st.text_input('Favorite Movie',  key='search')
-    with st.spinner("Searching for your movie"):
+    movie_name = st.text_input("✨ Favorite Movie",  key='search')
+    with st.spinner("Searching for your movie 🎞️"):
         matches = movie_finder(movie_name, movie_titles)
     # Use the current state of 'movie' to update the display dynamically
     if movie_name:  # Check if there is something in the input
@@ -109,7 +172,7 @@ with st.sidebar:
             st.session_state.movie = matches[4]
             st.session_state['button'] = False
     else:
-        st.write("Please type your favorite movie")
+        st.markdown("Please type your favorite movie 🎞️")
 
 if st.session_state.movie :
     result = return_result(st.session_state.movie)
@@ -127,7 +190,7 @@ if st.session_state.movie :
         with col5:
             st.metric(label="Vote Count", value = int(result['vote_count']))
         st.header('Overview')
-        st.markdown(css_style, unsafe_allow_html=True)
+        #st.markdown(css_style, unsafe_allow_html=True)
         st.markdown(f'<p class="custom-font">{result["overview"]}</p>', unsafe_allow_html=True)
         st.markdown("Stars: " + result['actor_pages'], unsafe_allow_html=True)
         st.markdown("Director: " + result['director_page'], unsafe_allow_html=True)
