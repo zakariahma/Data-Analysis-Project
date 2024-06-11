@@ -51,9 +51,8 @@ st.markdown("""
     align-items: center;
     justify-content: center;       
 }
-/* Favorite Movie */ 
-                      
-[data-testid="stMarkdownContainer"] p {
+/* Favorite Movie */                    
+[data-testid="stWidgetLabel"] p {
     font-size: 1.5rem;
     font-family: "Figtree", sans-serif;
     font-weight: 600;
@@ -69,7 +68,7 @@ st.markdown("""
     padding: 0.25rem;
     font-size: 1.2rem;
     font-family: "Figtree", sans-serif;
-    font-weight: 500;    
+    font-weight: 500;   
 }
 
 /* Movie Title*/
@@ -85,62 +84,72 @@ st.markdown("""
     gap: 0.5rem;
     color: white;
 }
-/* Metrics */
-.st-emotion-cache-12w0qpk {
+/* Metrics Titles */
+[data-testid="stMetricLabel"] p{
     /*background-color: #31363F;*/
+    font-family: "Figtree", sans-serif;
     color: white;
-    
+    font-size: 1.5rem;
+    font-weight: 600;    
 }
-
-/* Metrics titles */
-.st-emotion-cache-17c4ue {
-    color: white; 
+/* Metrics Values */
+[data-testid="stMetricValue"] div {
+    font-family: "Figtree", sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;            
 }
 
 #overview {
     color: white;
     font-family: "Figtree", sans-serif;
+    font-weight: 600;
 }          
 
-
 /* Actors links */            
-.st-emotion-cache-vdokb0 a {
+[data-testid="stMarkdownContainer"] a {
     color: #76ABAE;
     font-weight: 600;
+    font-family: "Figtree", sans-serif;
 }
-
 img {
     border-radius: 10px;        
 }
 /* Movies Buttons*/            
-.st-emotion-cache-7ym5gk  {
+.st-emotion-cache-bm2z3a [data-testid="baseButton-secondary"]  {
     color: white; 
     background-color: #161A30;
     border: none; 
 }
+
+.st-emotion-cache-bm2z3a [data-testid="baseButton-secondary"]:hover  {
+    color: #76ABAE;
+}           
 /*Recommend Button*/
-.st-emotion-cache-q3uqly {
+[data-testid="baseButton-primary"] {
     background-color: #B6BBC4;
     color: #161A30;
     border: none;
     font-family: "Figtree", sans-serif;         
 }
-.st-emotion-cache-j6qv4b p{
-    font-family: "Figtree", sans-serif; 
+[data-testid="baseButton-primary"] p{
+    font-family: "Figtree", sans-serif;
+    font-size: 1.2rem; 
     font-weight: 600;
 }
-.st-emotion-cache-q3uqly:hover {
+[data-testid="baseButton-primary"]:hover {
     background-color: white;        
 }
-.st-emotion-cache-q3uqly:active {
+[data-testid="baseButton-primary"]:active {
     background-color: white;        
 }
 
-.st-emotion-cache-1wivap2 {
+[data-testid="stMetricLabel"] {
+    display: flex;        
     text-align: center;
     font-family: "Figtree", sans-serif;
 }
-.st-emotion-cache-17c4ue {
+[data-testid="stMetricValue"] div{
     display: flex;
     justify-content: center; 
     font-family: "Figtree", sans-serif;       
