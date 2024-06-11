@@ -37,42 +37,43 @@ st.markdown("""
     color: #161A30;
     border: none;
 }
-.st-emotion-cache-13ejsyy:hover {
+[data-testid="baseButton-secondary"]:hover {
     color: #A91D3A;
     border-color: #A91D3A;
 }
-.st-emotion-cache-13ejsyy:active {
+[data-testid="baseButton-secondary"]:active {
     color: #A91D3A;
     border-color: #A91D3A;
 }
 /* Buttons container */
-.row-widget.stButton {
+[data-testid="stButton"] {
     display: flex;
     align-items: center;
     justify-content: center;       
 }
-/* Favorite Movie */           
-.st-emotion-cache-1jmvea6 p {
+/* Favorite Movie */ 
+                      
+# [data-testid="stMarkdownContainer"] p {
+#     font-size: 1.5rem;
+#     font-family: "Figtree", sans-serif;
+#     font-weight: 600;
+# }
+
+# .st-emotion-cache-vdokb0 p {
+#     font-size: 1.2rem;
+#     font-family: "Figtree", sans-serif;
+#     font-weight: 500;                                 
+# }
+            
+[data-testid="stMarkdownContainer"] p {
+    padding: 0.25rem;
     font-size: 1.5rem;
     font-family: "Figtree", sans-serif;
-    font-weight: 600;
+    font-weight: 600;    
 }
 
-.st-emotion-cache-vdokb0 p {
-    font-size: 1.2rem;
-    font-family: "Figtree", sans-serif;
-    font-weight: 500;                                 
-}
-            
-.st-emotion-cache-j6qv4b p {
-    padding: 0.25rem;
-    font-size: 1.2rem;
-    font-family: "Figtree", sans-serif;
-    font-weight: 500;    
-}
-
-
-.title{
+/* Movie Title*/
+[data-testid="stHeadingWithActionElements"] h2{
     padding-bottom: 0;
     margin-bottom: 0;
     color: white;
