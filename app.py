@@ -13,6 +13,8 @@ st.set_page_config(
 # Define your CSS
 st.markdown("""
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
 /* SideBar */
 .st-emotion-cache-6qob1r {
 background-color: #B6BBC4;           
