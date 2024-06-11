@@ -17,31 +17,31 @@ st.markdown("""
             
 /* SideBar */
 .st-emotion-cache-6qob1r {
-background-color: #B6BBC4;           
+    background-color: #B6BBC4;           
 }
 
 .st-emotion-cache-12fmjuu {
-background-color: #161A30;
+    background-color: #161A30;
 }
 /* main content */
 .st-emotion-cache-bm2z3a {
-background-color: #161A30;
-color: white;
-font-family: "Figtree", sans-serif;
+    background-color: #161A30;
+    color: white;
+    font-family: "Figtree", sans-serif;
 }
 /* Buttons */            
 .st-emotion-cache-13ejsyy {
-background-color: #B6BBC4;
-color: #161A30;
-border: none;
+    background-color: #B6BBC4;
+    color: #161A30;
+    border: none;
 }
 .st-emotion-cache-13ejsyy:hover {
-color: #A91D3A;
-border-color: #A91D3A;
+    color: #A91D3A;
+    border-color: #A91D3A;
 }
 .st-emotion-cache-13ejsyy:active {
-color: #A91D3A;
-border-color: #A91D3A;
+    color: #A91D3A;
+    border-color: #A91D3A;
 }
 /* Buttons container */
 .row-widget.stButton {
