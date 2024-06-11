@@ -16,11 +16,13 @@ st.markdown("""
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
             
 /* SideBar */
-.st-emotion-cache-6qob1r {
-    background-color: #B6BBC4;           
+
+[data-testid="stSidebarContent"] {
+    background-color:#B6BBC4;                
 }
 
-.st-emotion-cache-12fmjuu {
+/* Header */            
+[data-testid="stHeader"] {
     background-color: #161A30;
 }
 /* main content */
@@ -30,7 +32,7 @@ st.markdown("""
     font-family: "Figtree", sans-serif;
 }
 /* Buttons */            
-.st-emotion-cache-13ejsyy {
+[data-testid="baseButton-secondary"] {
     background-color: #B6BBC4;
     color: #161A30;
     border: none;
