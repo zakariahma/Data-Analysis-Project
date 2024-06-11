@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from fuzzywuzzy import process
 import numpy as np
-#import sqlite3
 import ast
 
 st.set_page_config(
@@ -30,8 +29,9 @@ font-family: "Figtree", sans-serif;
 }
 /* Buttons */            
 .st-emotion-cache-13ejsyy {
-background-color: #161A30;
-color: white
+background-color: #B6BBC4;
+color: #161A30;
+border: none;
 }
 .st-emotion-cache-13ejsyy:hover {
 color: #A91D3A;
@@ -82,10 +82,66 @@ border-color: #A91D3A;
 
 /* Metrics */
 .st-emotion-cache-12w0qpk {
-    background-color: #31363F;
+    /*background-color: #31363F;*/
     color: white;
-}               
+    
 }
+
+/* Metrics titles */
+.st-emotion-cache-17c4ue {
+    color: white; 
+}
+
+#overview {
+    color: white;
+    font-family: "Figtree", sans-serif;
+            }          
+}
+
+/* Actors links */            
+.st-emotion-cache-vdokb0 a {
+    color: #76ABAE;
+    font-weight: 600;
+            }
+
+img {
+    border-radius: 10px;        
+}
+/* Movies Buttons*/            
+.st-emotion-cache-7ym5gk  {
+    color: white; 
+    background-color: #161A30;
+    border: none; 
+            }
+/*Recommend Button*/
+.st-emotion-cache-q3uqly {
+    background-color: #B6BBC4;
+    color: #161A30;
+    border: none;
+    font-family: "Figtree", sans-serif;         
+        }
+.st-emotion-cache-j6qv4b p{
+    font-family: "Figtree", sans-serif; 
+    font-weight: 600;
+            }
+.st-emotion-cache-q3uqly:hover {
+    background-color: white;        
+            }
+.st-emotion-cache-q3uqly:active {
+    background-color: white;        
+            }
+
+.st-emotion-cache-1wivap2 {
+    text-align: center;
+    font-family: "Figtree", sans-serif;
+            }
+.st-emotion-cache-17c4ue {
+    display: flex;
+    justify-content: center; 
+    font-family: "Figtree", sans-serif;       
+            }
+
+
 </style>
 """, unsafe_allow_html=True) 
 
@@ -203,40 +259,60 @@ if st.session_state.movie :
         col6, col7, col8, col9, col10 = st.columns(5)
         with col6:
             st.image(result['movie_posters'][0])
-        with col7:
-            st.image(result['movie_posters'][1])
-        with col8:
-            st.image(result['movie_posters'][2])
-        with col9:
-            st.image(result['movie_posters'][3])
-        with col10:
-            st.image(result['movie_posters'][4])
-        col11, col12, col13, col14, col15 = st.columns(5)
-        with col11:
             if st.button(f" {result['movie_formatted_titles'][0]} "):
                 st.session_state.movie = f"{result['movie_formatted_titles'][0]}"
                 st.session_state['button'] = False
                 st.rerun()
-        with col12:
+        with col7:
+            st.image(result['movie_posters'][1])
             if st.button(f" {result['movie_formatted_titles'][1]} "):
                 st.session_state.movie = f"{result['movie_formatted_titles'][1]}"
                 st.session_state['button'] = False
                 st.rerun()
-        with col13:
+        with col8:
+            st.image(result['movie_posters'][2])
             if st.button(f" {result['movie_formatted_titles'][2]} "):
                 st.session_state.movie = f"{result['movie_formatted_titles'][2]}"
                 st.session_state['button'] = False
                 st.rerun()
-        with col14:
+        with col9:
+            st.image(result['movie_posters'][3])
             if st.button(f" {result['movie_formatted_titles'][3]} "):
                 st.session_state.movie = f"{result['movie_formatted_titles'][3]}"
                 st.session_state['button'] = False
                 st.rerun()
-        with col15:
+        with col10:
+            st.image(result['movie_posters'][4])
             if st.button(f" {result['movie_formatted_titles'][4]} "):
                 st.session_state.movie = f"{result['movie_formatted_titles'][4]}"
                 st.session_state['button'] = False
                 st.rerun()
+        # col11, col12, col13, col14, col15 = st.columns(5)
+        # with col11:
+        #     if st.button(f" {result['movie_formatted_titles'][0]} "):
+        #         st.session_state.movie = f"{result['movie_formatted_titles'][0]}"
+        #         st.session_state['button'] = False
+        #         st.rerun()
+        # with col12:
+        #     if st.button(f" {result['movie_formatted_titles'][1]} "):
+        #         st.session_state.movie = f"{result['movie_formatted_titles'][1]}"
+        #         st.session_state['button'] = False
+        #         st.rerun()
+        # with col13:
+        #     if st.button(f" {result['movie_formatted_titles'][2]} "):
+        #         st.session_state.movie = f"{result['movie_formatted_titles'][2]}"
+        #         st.session_state['button'] = False
+        #         st.rerun()
+        # with col14:
+        #     if st.button(f" {result['movie_formatted_titles'][3]} "):
+        #         st.session_state.movie = f"{result['movie_formatted_titles'][3]}"
+        #         st.session_state['button'] = False
+        #         st.rerun()
+        # with col15:
+        #     if st.button(f" {result['movie_formatted_titles'][4]} "):
+        #         st.session_state.movie = f"{result['movie_formatted_titles'][4]}"
+        #         st.session_state['button'] = False
+        #         st.rerun()
 
 
 
