@@ -14,15 +14,15 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-
+            
 /* SideBar */
 .st-emotion-cache-6qob1r {
 background-color: #B6BBC4;           
-            }
+}
 
 .st-emotion-cache-12fmjuu {
 background-color: #161A30;
-            }
+}
 /* main content */
 .st-emotion-cache-bm2z3a {
 background-color: #161A30;
@@ -81,7 +81,7 @@ border-color: #A91D3A;
 :has(.title) {
     gap: 0.5rem;
     color: white;
-
+}
 /* Metrics */
 .st-emotion-cache-12w0qpk {
     /*background-color: #31363F;*/
@@ -97,14 +97,14 @@ border-color: #A91D3A;
 #overview {
     color: white;
     font-family: "Figtree", sans-serif;
-            }          
-}
+}          
+
 
 /* Actors links */            
 .st-emotion-cache-vdokb0 a {
     color: #76ABAE;
     font-weight: 600;
-            }
+}
 
 img {
     border-radius: 10px;        
@@ -114,36 +114,34 @@ img {
     color: white; 
     background-color: #161A30;
     border: none; 
-            }
+}
 /*Recommend Button*/
 .st-emotion-cache-q3uqly {
     background-color: #B6BBC4;
     color: #161A30;
     border: none;
     font-family: "Figtree", sans-serif;         
-        }
+}
 .st-emotion-cache-j6qv4b p{
     font-family: "Figtree", sans-serif; 
     font-weight: 600;
-            }
+}
 .st-emotion-cache-q3uqly:hover {
     background-color: white;        
-            }
+}
 .st-emotion-cache-q3uqly:active {
     background-color: white;        
-            }
+}
 
 .st-emotion-cache-1wivap2 {
     text-align: center;
     font-family: "Figtree", sans-serif;
-            }
+}
 .st-emotion-cache-17c4ue {
     display: flex;
     justify-content: center; 
     font-family: "Figtree", sans-serif;       
-            }
-
-
+}
 </style>
 """, unsafe_allow_html=True) 
 
