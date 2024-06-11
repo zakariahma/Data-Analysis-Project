@@ -53,23 +53,23 @@ st.markdown("""
 }
 /* Favorite Movie */ 
                       
-# [data-testid="stMarkdownContainer"] p {
-#     font-size: 1.5rem;
-#     font-family: "Figtree", sans-serif;
-#     font-weight: 600;
-# }
-
-# .st-emotion-cache-vdokb0 p {
-#     font-size: 1.2rem;
-#     font-family: "Figtree", sans-serif;
-#     font-weight: 500;                                 
-# }
-            
 [data-testid="stMarkdownContainer"] p {
-    padding: 0.25rem;
     font-size: 1.5rem;
     font-family: "Figtree", sans-serif;
-    font-weight: 600;    
+    font-weight: 600;
+}
+
+.st-emotion-cache-vdokb0 p {
+    font-size: 1.2rem;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;                                 
+}
+            
+[data-testid="baseButton-secondary"] p {
+    padding: 0.25rem;
+    font-size: 1.2rem;
+    font-family: "Figtree", sans-serif;
+    font-weight: 500;    
 }
 
 /* Movie Title*/
